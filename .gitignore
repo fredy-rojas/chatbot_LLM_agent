@@ -1,0 +1,79 @@
+#================
+# APP DEVELOPMENT
+coffee-shop-app/
+node_modules/
+.expo/
+
+# =================
+dataset/
+
+#===============
+# Python development API
+products/
+venv_coffee/
+python_code/api/recommendation_objects/
+python_code/build_vector_database.ipynb
+python_code/firebase_uploader.ipynb
+python_code/prompt_engineering_tutorial.ipynb
+python_code/prompt_engineering_tutorial.ipynb
+python_code/recommendation_engine_training.ipynb
+
+
+
+# Ignore all Python cache files
+__pycache__/
+*.pyc
+
+
+#=======================
+# Ignore VS Code settings
+.vscode/
+
+#===============
+# Keys
+.env
+**/.env
+
+
+
+#==================
+
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+.env
+
+# typescript
+*.tsbuildinfo
+
+app-example
