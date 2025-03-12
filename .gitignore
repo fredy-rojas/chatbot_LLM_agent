@@ -1,6 +1,7 @@
 #================
 # APP DEVELOPMENT
-coffee-shop-app/
+coffee-shop-app/app-example
+coffee-shop-app/assets/images
 node_modules/
 .expo/
 

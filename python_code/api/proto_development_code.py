@@ -53,6 +53,7 @@ def main():
         print(f"\nGuard respond: {guard_agent_response['memory']['guard_decision']}\n")
         if guard_agent_response["memory"]["guard_decision"] == "not allowed":
             messages.append(guard_agent_response)
+            print(f"message not allowed \n{message}\n\n")
             continue
         
         # _____________________________________________________________

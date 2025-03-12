@@ -20,6 +20,18 @@ class OrderTakingAgent():
     def get_response(self,messages):
         messages = deepcopy(messages)
         # Ypart of the prompt: ou are a customer support Bot for a coffee shop called "Merry's way"
+            #         You must read user response, determine in which step number of order taking is, and then use the folloing step reference to determine what to do next:
+            # 1. Take the User's Order
+            # 2. Validate that all their items are in the menu
+            # 3. if an item is not in the menu let the user know and repeat back the remaining valid order
+            # 4. Ask them if they need anything else.
+            # 5. If they do, then repeat starting from step 3
+            # 6. If they don't want anything else. Using the "order" object that is in the output. Make sure to hit all three points:
+            #     6.1 list down all the items and their prices
+            #     6.2 calculate the total. 
+            #     6.3 Thank the user for the order and close the conversation with no more questions
+            # "step number": Determine which task you are on based on the conversation.
+
         system_prompt = """
             Your are a friendly customer support bot that provide human-like responses for a coffee shop"
 
@@ -51,16 +63,15 @@ class OrderTakingAgent():
             * Don't tell the user to go to place to get the order
 
 
-            You must read user response, determine in which step number of order taking is, and then use the folloing step reference to determine what to do next:
+            You must read previous messages step number an move to the next step. Use the folloing number step reference to determine what to do next:
             1. Take the User's Order
             2. Validate that all their items are in the menu
             3. if an item is not in the menu let the user know and repeat back the remaining valid order
-            4. Ask them if they need anything else.
-            5. If they do, then repeat starting from step 3
-            6. If they don't want anything else. Using the "order" object that is in the output. Make sure to hit all three points
-                1. list down all the items and their prices
-                2. calculate the total. 
-                3. Thank the user for the order and close the conversation with no more questions
+            4. If they do, then repeat starting from step 3
+            5. If they don't want anything else. Using the "order" object that is in the output. Make sure to hit all three points:
+                5.1 list down all the items and their prices
+                5.2 calculate the total. 
+                5.3 Thank the user for the order and close the conversation with no more questions
 
             The user message will contain a section called memory. This section will contain the following:
             "order"
@@ -71,7 +82,7 @@ class OrderTakingAgent():
             Your output should be in a structured json format like so. each key is a string and each value is a string. Make sure to follow the format exactly:
             {
             "chain of thought": Write down your critical thinking about what is the maximum task number the user is on write now. Then write down your critical thinking about the user input and it's relation to the coffee shop process. Then write down your thinking about how you should respond in the response parameter taking into consideration the Things to NOT DO section. and Focus on the things that you should not do. 
-            "step number": Determine which task you are on based on the conversation.
+            "step number": Read previous messages "step number" + 1.
             "order": this is going to be a list of jsons like so. [{"item":put the item name, "quanitity": put the number that the user wants from this item, "price":put the total price of the item }]
             "response": write the a response to the user
             }
