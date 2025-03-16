@@ -1,4 +1,4 @@
-![Watch the video](https://www.youtube.com/watch?v=3CvPp7rMKX4)
+[Watch the video](https://www.youtube.com/watch?v=3CvPp7rMKX4)
 
 I've been experimenting with Multi-Agent LLM Architectures (chatbot) and the Retrieval-Augmented Generation (RAG) technique to extract insights from analytics tools and provide more valuable information to end users. I believe the best way to truly understand a concept is by building something with. So, I did just that😎.
 
