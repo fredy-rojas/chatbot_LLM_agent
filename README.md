@@ -12,3 +12,12 @@ Main takeaways:
 - It is clear that a deployment will require monitoring of the chatbot, logging responses, implementing a sentiment analysis mechanism to detect frustrated messages, and other monitoring strategies.
 
 Overall, this approach provides a human-like AI assistant that enhances user experience and saves time. While LLM-based architectures are still evolving, they already offer strong potential, and this is just the baseline🧐. It’s clear that these models will continue to improve rapidly in the near future.
+
+**Future Work:**
+Before deployment, it is crucial to ensure that the Multi-Agent solution functions reliably. My next steps will focus on this goal through the following approaches:
+- Reference-Based and Reference-Free Evaluation:
+  - Using standard benchmarks and automated metrics to assess model outputs with and without ground-truth references.
+- Developing an LLM Judge and Evaluating It:
+  – Implementing a Large Language Model (LLM) as a judge to evaluate agent-generated responses and assessing the reliability of this judge.
+- User Simulation Scenarios:
+  – Creating simulated user interactions to test how agents respond to various real-world situations.
