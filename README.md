@@ -9,7 +9,7 @@ Main takeaways:
 
 - Generating application-level actions (e.g., adding items to the cart, sending order details to the counter) requires explicitly defining output formats in prompts, adding an additional agent to control output formats, and handling errors with the customer experience in mind. 
 
-- It is clear that a deployment will require monitoring of the chatbot, logging responses, implementing a sentiment analysis mechanism to detect frustrated messages, and other monitoring strategies.
+- Deploying the chatbot will require robust monitoring, including response logging, sentiment analysis to detect user frustration, and other strategies to maintain performance and user satisfaction.
 
 Overall, this approach provides a human-like AI assistant that enhances user experience and saves time. While LLM-based architectures are still evolving, they already offer strong potential, and this is just the baseline🧐. It’s clear that these models will continue to improve rapidly in the near future.
 
